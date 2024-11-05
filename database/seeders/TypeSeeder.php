@@ -20,12 +20,12 @@ class TypeSeeder extends Seeder
         Type::truncate();
 
         for ($i = 0; $i < 15; $i++) {
-            $name = fake()->words(rand(1,10), true);
-            $randomProject = Project::inRandomOrder()->first();
+            $name = fake()->words(rand(1,3), true);
+            //$randomProject = Project::inRandomOrder()->first();
 
             Type::create([
                 'name' => $name,
-                'project_id' => $randomProject->id
+                //'project_id' => $randomProject->id
             ]);
 
         }
