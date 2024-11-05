@@ -5,7 +5,10 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-use App\Models\Type;
+use App\Models\{
+    Type,
+    Project
+};
 
 class TypeSeeder extends Seeder
 {
@@ -17,10 +20,12 @@ class TypeSeeder extends Seeder
         Type::truncate();
 
         for ($i = 0; $i < 15; $i++) {
-            $name = fake()->words(rand(1,5), true);
+            $name = fake()->words(rand(1,10), true);
+            $randomProject = Project::inRandomOrder()->first();
 
             Type::create([
-                'name' => $name
+                'name' => $name,
+                'project_id' => $randomProject->id
             ]);
 
         }

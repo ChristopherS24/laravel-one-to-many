@@ -13,9 +13,8 @@
                     <table class="table">
                         <thead>
                           <tr>
-                            <th scope="col">Titolo</th>
-                            <th scope="col">Data Creazione</th>
-                            <th scope="col">Autore</th>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
 
                           </tr>
                         </thead>

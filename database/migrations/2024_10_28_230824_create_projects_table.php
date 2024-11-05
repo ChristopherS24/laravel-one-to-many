@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('title', 64);
             $table->date('creation_date')->nullable();
             $table->string('author');
             $table->timestamps();
