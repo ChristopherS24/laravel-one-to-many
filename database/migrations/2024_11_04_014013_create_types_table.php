@@ -15,6 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('name', 64);
 
+            $table->unsignedInteger('project_id');
+            $table->foreign('project_id')
+                ->references('id')
+                ->on('projects');
+
             $table->timestamps();
         });
     }
